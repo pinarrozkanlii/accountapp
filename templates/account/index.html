@@ -1,0 +1,152 @@
+{% load static %}<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Authentication</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            * {
+                box-sizing: border-box;
+              }
+
+body,html {
+    background-image: url('/static/images/background.jpg');
+    height:100%;
+    
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    
+    
+
+
+} 
+a {
+    color:white;
+    text-decoration:none;
+}
+.background{
+   
+    display:flex;
+    background-image:url('/static/images/background.jpg');
+    
+    
+      
+      
+      
+      
+
+  
+    
+
+}
+
+    
+
+}
+.nav{
+    margin-top:0;
+    display:flex;
+}
+
+table{
+    position:relative;
+    width:100%;
+    margin-top: 18px;
+    color:white;
+    
+    
+}
+
+
+thead th:nth-child(2) {
+    color: white;
+    width:35%;
+    font-family: 'Alex Brush', cursive;
+    text-align:right;
+    font-size:30px;
+  }
+  
+  thead th:nth-child(3){
+    font-family: 'Rajdhani', sans-serif;
+      text-align:right;
+  }
+thead th:nth-child(1){
+    font-family: 'Rajdhani', sans-serif;
+}
+
+thead th:nth-child(4){
+    font-family: 'Rajdhani', sans-serif;
+      
+  }
+  section{
+      position:absolute;
+      height:310px;
+      width:80vh;
+      margin-top:30vh;
+      margin-left:50vh;
+      border-radius:10px;
+      display:flex;
+      align-items:center;
+      visibility:hidden;
+      
+      
+  }
+  img{
+      border-radius:50%;
+      width:150px;
+  }
+  .menu-option{
+      margin:5px;    
+      align-items:center;
+      background:rgba(0,0,0,0.1);
+      box-shadow:0 0 10px rgba(0,0,0,1);
+     padding:60px;
+          
+  }
+  .cursor{
+      cursor:pointer;
+  }
+h3{
+    color:white;
+}
+        </style>
+    </head>
+    <body>
+        <!--<h3>Welcome to SnackPoint</h3>-->
+        {% if user.is_authenticated %}
+        <h4>Hello</h4>
+        <button type="submit"><a href="/signout">Signout</a></button>
+
+        {% else %}
+        <!--<button type="submit"><a href="/signup">Signup</a></button>
+        <button type="submit"><a href="/signin">Signin</a></button>-->
+         <div class="background" id="background"></div>
+
+       
+         <div class="nav">
+            <table>
+                <thead>
+                    <tr>
+                        <th onclick="myfunc()" class="cursor">Menu</th>
+                        <th class="logo">SnackPoint</th>
+                        <th>Contact</th>
+                        <th><a href= "/signup" >Order</a></th>
+                    </tr>
+                </thead>    
+            </table>
+            </div>       
+        {% endif %}
+        
+        <script src="{% static '/js/indexapp.js' %}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="" async defer></script>
+    </body>
+</html>

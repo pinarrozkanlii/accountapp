@@ -1,0 +1,185 @@
+*{
+  
+    box-sizing: border-box;
+}
+body,html {
+    /*background-image: url("https://s2.best-wallpaper.net/wallpaper/3840x2160/1708/Burger-meat-knife-food_3840x2160.jpg");*/
+    background-image: url('/static/images/background.jpg');
+    height:100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    
+
+}
+.nav{
+    margin-top:0;
+    display:flex;
+    color:white;
+    }
+    
+    table{
+    position:relative;
+    width:100%;
+    margin-top: 18px;
+    color:white;
+    
+    
+    }
+    
+    
+    thead th:nth-child(2) {
+    color: white;
+    width:35%;
+    font-family: 'Alex Brush', cursive;
+    text-align:right;
+    font-size:30px;
+    }
+    
+    thead th:nth-child(3){
+    font-family: 'Rajdhani', sans-serif;
+    text-align:right;
+    }
+    thead th:nth-child(1){
+    font-family: 'Rajdhani', sans-serif;
+    }
+    
+    thead th:nth-child(4){
+    font-family: 'Rajdhani', sans-serif;
+    
+    }
+
+.bg-image:after{
+    position:absolute;
+    content: '';
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background: rgba(0,0,0,0.7);
+    
+
+}
+a {
+    color:white;
+    text-decoration:none;
+    }
+.signin{
+        margin-top: 20px;
+        color:white;
+        font-size: 15px;
+        font-family:'Poppins',sans-serif;
+    }
+.signin a{
+        color:#610606;
+        text-decoration:none;
+    }
+.content{
+    
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+    z-index: 999;
+    width:370px;
+    padding: 60px 32px;
+    background: rgba(255,255,255,0.04);
+    box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+
+}
+
+.content header{
+    color:white;
+    font-size: 33px;
+    font-weight:600;
+    margin:0 0 35px 0;
+    font-family:'Montserrat',sans-serif;
+}
+
+.field{
+    
+    position:relative;
+    height:45px;
+    width:100%;
+    display:flex;
+    background: rgba(255,255,255,0.94);
+}
+
+.field input{
+    height:100%;
+    width:100%;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:#222;
+    font-size:16px;
+    font-family: 'Poppins',sans-serif;
+
+}
+.show{
+    position:absolute;
+    right:13px;
+    font-size:13px;
+    font-weight:700;
+    color:#222;
+    cursor:pointer;
+    display:none;
+    font-family: 'Montserrat',sans-serif;
+}
+.field span{
+    color:#222;
+    width:40px;
+    line-height:45px;
+
+}
+.password:valid ~ .show {
+    display:block;
+}
+.space{
+    margin-top:16px;
+
+}
+.space2{ 
+    margin-top:16px;
+    margin-bottom:20px;
+}
+
+
+input[type="submit"]{
+    
+    background:#610606;
+    border:1px solid #610606;
+    color:white;
+    font-size:18px;
+    letter-spacing:1px;
+    font-weight:600;
+    font-family:'Montserrat',sans-serif;
+    cursor:pointer;
+    
+}
+input[type="submit"]:hover{
+    
+    color:#792323;
+
+}
+
+.field span.fa-check-circle{
+    color:#2ecc71;
+    visibility:hidden;
+}
+
+.field span.fa-exclamation-circle{
+    color:#e74c3c;
+    visibility:hidden;
+}
+
+.field-success span.fa-check-circle{
+    color:#2ecc71;
+    visibility:visible;
+}
+.field-error span.fa-exclamation-circle{
+    color:#e74c3c;
+    visibility:visible;
+}

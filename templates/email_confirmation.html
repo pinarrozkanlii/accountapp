@@ -1,0 +1,12 @@
+{% autoescape off %}
+
+welcome to SnackPoint
+
+Hello !
+
+Please confirm Your email by clicking on the following link.
+
+Confirmation Link: http://{{ domain }}{% url 'account:activate ' uidb64=uid token=token %}
+
+
+{% endautoescape %}
